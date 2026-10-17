@@ -29,7 +29,7 @@ export const MarketAnalysisPage: React.FC<MarketAnalysisPageProps> = ({ navigate
   } = useMarket();
 
   const [searchQuery, setSearchQuery] = useState('');
-  const [assetFilter, setAssetFilter] = useState<'All' | 'Equities' | 'Crypto' | 'Forex' | 'Commodities'>('All');
+  const [assetFilter, setAssetFilter] = useState<'All' | 'Equities' | 'Indices' | 'Crypto' | 'Forex' | 'Commodities'>('All');
 
   const filteredInstruments = instruments.filter((inst) => {
     const matchesSearch =
@@ -83,7 +83,7 @@ export const MarketAnalysisPage: React.FC<MarketAnalysisPageProps> = ({ navigate
 
             {/* Filter Pills */}
             <div className="flex flex-wrap gap-1 text-[10px]">
-              {(['All', 'Equities', 'Crypto', 'Forex', 'Commodities'] as const).map((filter) => (
+              {(['All', 'Equities', 'Indices', 'Crypto', 'Forex', 'Commodities'] as const).map((filter) => (
                 <button
                   key={filter}
                   onClick={() => setAssetFilter(filter)}
