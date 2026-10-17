@@ -304,7 +304,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ navigate, onSelect
               </button>
             </div>
             <div className="divide-y divide-slate-800/60">
-              {instruments.slice(0, 5).map((inst) => (
+              {instruments.slice(0, 12).map((inst) => (
                 <div
                   key={inst.symbol}
                   onClick={() => {
