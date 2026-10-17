@@ -91,7 +91,7 @@ export interface Candle {
 export interface MarketInstrument {
   symbol: string;
   name: string;
-  assetClass: 'Equities' | 'Crypto' | 'Forex' | 'Commodities';
+  assetClass: 'Equities' | 'Indices' | 'Crypto' | 'Forex' | 'Commodities';
   currentPrice: number;
   change24h: number;
   changePercent24h: number;
